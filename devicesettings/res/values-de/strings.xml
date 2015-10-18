@@ -22,6 +22,7 @@
   <string name="pick_up_gesture_summary">Benachrichtigungen beim aufheben pulsieren</string>
   <string name="pocket_gesture_title">Tasche</string>
   <string name="pocket_gesture_summary">Benachrichtigungen werden eingeblendet wenn das Gerät aus der Tasche geholt wird</string>
+  <string name="proximity_wake_title">Aufwecken bei Annäherung</string>
   <string name="proximity_wake_enable_title">Bei Annäherung aufwecken</string>
   <string name="proximity_wake_enable_summary">Gerät durch Winken aufwecken</string>
 </resources>

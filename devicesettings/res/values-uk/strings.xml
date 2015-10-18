@@ -20,6 +20,7 @@
   <string name="hand_wave_gesture_summary">Пульсуючі сповіщення на при жестах руками</string>
   <string name="pocket_gesture_title">Кишеня</string>
   <string name="pocket_gesture_summary">Пульсуючі сповіщення при вийманні з кишені</string>
+  <string name="proximity_wake_title">Прокидання при наближенні</string>
   <string name="proximity_wake_enable_title">Прокидання при наближенні</string>
   <string name="proximity_wake_enable_summary">Прокидати пристрій на жест рукою</string>
 </resources>

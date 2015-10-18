@@ -35,7 +35,6 @@ public class GloveModeService extends Service {
 
     private static final String GLOVE_PATH = "/sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity";
     private static final long GLOVE_UPDATE_DELTA = 900000; // 15 minutes
-    private static int HighTouchSensitivity = 1; //Enabled by Default
 
     private Context mContext;
     private long mLastGloveModeUpdate = 0;
@@ -107,6 +106,6 @@ public class GloveModeService extends Service {
     };
 
     private boolean isGloveModeEnabled() {
-        return HighTouchSensitivity == 1;
+        return true;
     }
 }

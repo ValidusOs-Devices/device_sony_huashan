@@ -19,6 +19,7 @@
   <string name="hand_wave_gesture_title">Unduire mână</string>
   <string name="pocket_gesture_title">Buzunar</string>
   <string name="pocket_gesture_summary">Puls notificări privind eliminarea din buzunar</string>
+  <string name="proximity_wake_title">Trezire prin proximitate</string>
   <string name="proximity_wake_enable_title">Trezire prin proximitate</string>
   <string name="proximity_wake_enable_summary">Trezire dispozitiv la unduirea mâinii</string>
 </resources>

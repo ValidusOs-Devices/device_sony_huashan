@@ -22,6 +22,7 @@
   <string name="pick_up_gesture_summary">Activer les notification en prenant l\'appareil en main</string>
   <string name="pocket_gesture_title">Poche</string>
   <string name="pocket_gesture_summary">Activer les notification en sortant l\'appareil de la poche</string>
+  <string name="proximity_wake_title">Activation de proximité</string>
   <string name="proximity_wake_enable_title">Activation de proximité</string>
   <string name="proximity_wake_enable_summary">Activer l\'appareil d\'un geste de la main</string>
 </resources>

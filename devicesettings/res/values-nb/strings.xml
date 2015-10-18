@@ -20,6 +20,7 @@
   <string name="hand_wave_gesture_summary">Vibrer varsler med håndvink</string>
   <string name="pocket_gesture_title">Lomme</string>
   <string name="pocket_gesture_summary">Vibrer varsler når du tar telefonen opp av lommen</string>
+  <string name="proximity_wake_title">Berøringsfri vekking</string>
   <string name="proximity_wake_enable_title">Berøringsfri vekking</string>
   <string name="proximity_wake_enable_summary">Vekk enheten med håndvink</string>
 </resources>
