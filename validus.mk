@@ -13,10 +13,10 @@
 # limitations under the License.
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/validus/config/nfc_enhanced.mk)
 
-# Inherit CM common Phone stuff
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit Validus common Phone stuff
+$(call inherit-product, vendor/validus/config/common_full_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, device/sony/huashan/huashan.mk)
@@ -27,7 +27,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifications
 PRODUCT_DEVICE := huashan
-PRODUCT_NAME := cm_huashan
+PRODUCT_NAME := validus_huashan
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia SP

@@ -24,8 +24,6 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
 
-import cyanogenmod.providers.CMSettings;
-
 import java.lang.System;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -37,6 +35,7 @@ public class GloveModeService extends Service {
 
     private static final String GLOVE_PATH = "/sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity";
     private static final long GLOVE_UPDATE_DELTA = 900000; // 15 minutes
+    private static int HighTouchSensitivity = 1; //Enabled by Default
 
     private Context mContext;
     private long mLastGloveModeUpdate = 0;
@@ -108,12 +107,6 @@ public class GloveModeService extends Service {
     };
 
     private boolean isGloveModeEnabled() {
-        int HighTouchSensitivity = CMSettings.System.getInt(mContext.getContentResolver(),
-                CMSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, -1);
-        if (HighTouchSensitivity == -1 && CMSettings.System.putInt(mContext.getContentResolver(),
-                CMSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, 1)) {
-            HighTouchSensitivity = 1;
-        }
         return HighTouchSensitivity == 1;
     }
 }
