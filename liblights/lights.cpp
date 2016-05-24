@@ -43,6 +43,7 @@
 #endif
 
 /* === Module Constants === */
+#define LEDS_WITNESS_MODE 1
 #define LIGHT_BRIGHTNESS_MAXIMUM 0xFF
 #define MAX_PATH_SIZE 80
 enum leds_state { LEDS_OFF, LEDS_NOTIFICATIONS, LEDS_BATTERY };
@@ -341,7 +342,6 @@ set_light_leds_locked(struct light_device_t* dev,
 
     int i, c;
     int flashMode;
-    int leds_modes;
     int leds_rgb_update;
     int leds_unit_minid;
     int leds_unit_maxid;
@@ -358,8 +358,7 @@ set_light_leds_locked(struct light_device_t* dev,
     led_alpha[0] =
     led_alpha[1] =
     led_alpha[2] =
-    leds_brightness = (colorARGB & 0xFF000000) >> 24;
-    leds_modes = state->ledsModes;
+    leds_brightness = (state->color & 0xFF000000) >> 24;
     leds_unit_minid = 1;
     leds_unit_maxid = LEDS_UNIT_COUNT;
     delayOn = state->flashOnMS;
@@ -376,8 +375,8 @@ set_light_leds_locked(struct light_device_t* dev,
         flashMode = LIGHT_FLASH_NONE;
     }
 
-    /* Use multiple LEDs */
-    if (leds_modes & LIGHT_MODE_MULTIPLE_LEDS) {
+    /* Allow the witness mode, replaced in future commit with Multiple LEDs */
+    if (LEDS_WITNESS_MODE) {
 
         /* LEDs charging witness mode */
         if (is_lit(&g_battery)) {
@@ -517,7 +516,7 @@ set_light_leds_locked(struct light_device_t* dev,
             "Update : %d/%d - Brightness : %d - LEDs Mode : %d - "
             "Mode : %d (Not. 1 / Bat. 2)\n",
             led_rgb[0], led_rgb[1], led_rgb[2], delayOn, delayOff, flashMode,
-            leds_rgb_update, leds_program_update, leds_brightness, leds_modes,
+            leds_rgb_update, leds_program_update, leds_brightness, 1,
             g_leds_state);
     (void)dev;
     return 0;
@@ -630,4 +629,3 @@ struct hw_module_t HAL_MODULE_INFO_SYM = {
     .dso = NULL,
     .reserved = {0},
 };
-
