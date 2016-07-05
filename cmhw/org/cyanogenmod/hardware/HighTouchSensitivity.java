@@ -16,7 +16,8 @@
 
 package org.cyanogenmod.hardware;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import java.io.File;
+import org.cyanogenmod.hardware.util.FileUtils;
 
 /**
  * Glove mode / high touch sensitivity
@@ -31,7 +32,8 @@ public class HighTouchSensitivity {
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() {
-        return FileUtils.isFileWritable(GLOVE_PATH);
+        File f = new File(GLOVE_PATH);
+        return f.exists();
     }
 
     /**
